@@ -13,8 +13,9 @@ def more(text):
 url = input("Give url:\t") # προσδιορισμός του url
 print(url)
 
-with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    more(html)
+#with requests.get(url) as response:  # το αντικείμενο response
+    #html = response.text
+    #more(html)
 
-
+with requests.get(url) as response:
+    print(response.text)
