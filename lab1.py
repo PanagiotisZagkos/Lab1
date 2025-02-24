@@ -16,13 +16,18 @@ print(url)
 #with requests.get(url) as response:  # το αντικείμενο response
     #html = response.text
     #more(html)
-<<<<<<< HEAD
+
 if not url.startswith('https://'):
     url = 'https://' + url
 
  
-=======
-
 with requests.get(url) as response:
-    print(response.text)
->>>>>>> get
+    for key in response.headers:
+        print(f"{key}, []{response.headers[key]}")
+
+    print(f"Server: {response.headers.get('Server')}")
+
+    print(f"Has cookies: {'Set-Cookie' in response.headers}")
+
+    for cookie in response.cookies:
+        print(f"Name: {cookie.name}, Expires:{datetime}")
