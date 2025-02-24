@@ -16,9 +16,13 @@ print(url)
 #with requests.get(url) as response:  # το αντικείμενο response
     #html = response.text
     #more(html)
+<<<<<<< HEAD
 if not url.startswith('https://'):
     url = 'https://' + url
 
-#with requests.get(url) as response:
-    #print(response.text)
  
+=======
+
+with requests.get(url) as response:
+    print(response.text)
+>>>>>>> get
